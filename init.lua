@@ -162,10 +162,6 @@ vim.opt.scrolloff = 15
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
---====================== CUSTOM KEYBINDINGS START ========================--
-require 'lua.custom.mappings'
---====================== CUSTOM KEYBINDINGS END ========================--
-
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
@@ -923,6 +919,10 @@ require('lazy').setup({
     },
   },
 })
+
+--====================== CUSTOM KEYBINDINGS START ========================--
+require 'custom.mappings'
+--====================== CUSTOM KEYBINDINGS END ========================--
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
