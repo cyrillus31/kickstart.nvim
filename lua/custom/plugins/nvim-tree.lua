@@ -17,6 +17,7 @@ local opts = {
   filters = {
     dotfiles = true, -- use H to turn on dotfiles
     exclude = { vim.fn.stdpath 'config' .. '/lua/custom' },
+    custom = {"__pycache__", ".mypy_cache", ".pytest_cache"},
   },
   disable_netrw = true,
   hijack_netrw = true,
